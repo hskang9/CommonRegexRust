@@ -99,6 +99,12 @@ println!("{:?}",commonregex::ipv6s("The IPv6 address for localhost is 0:0:0:0:0:
 //prints ["0:0:0:0:0:0:0:1", "::1"]
 ```
 
+Contributors
+==============
+Here are Rustaceans who contributed to this repository.
+
+[nabijaczleweli](www.github.com/nabijaczleweli)
+
 CommonRegex Ports
 =================
 There are CommonRegex ports for other languages, see [here](https://github.com/madisonmay/CommonRegex/#commonregex-ports "CommonRegex ports")
