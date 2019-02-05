@@ -21,7 +21,7 @@ cargo install commonregex
 
 Or use Crates.toml
 
-```toml
+```
 [package]
 name = <package-name>
 version = <version>
