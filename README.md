@@ -9,7 +9,7 @@ Pull requests welcome!
 
 Please note that this is currently English/US specific.
 
-[![Build Status](https://travis-ci.org/talyssonoc/commonregexjs.svg?branch=master)](https://travis-ci.org/hskang9/CommonRegexRust)
+[![Build Status](https://travis-ci.org/hskang9/CommonRegexRust.svg?branch=master)](https://travis-ci.org/hskang9/CommonRegexRust)
 
 Installation
 ===
