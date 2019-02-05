@@ -17,7 +17,7 @@ categories = ["parsing"]
 license = "MIT"
 
 [badges]
-travis-ci = { repository = "https://github.com/hskang9/CommonRegexRust.git", branch = "master" }
+travis-ci = { repository = "https://travis-ci.org/hskang9/CommonRegexRust", branch = "master" }
 
 
 
