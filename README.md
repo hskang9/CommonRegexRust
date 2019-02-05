@@ -79,7 +79,7 @@ on Jan 9th 2012. 4:00 would be ideal, actually. If you have any
 questions, You can reach me at (519)-236-2723x341 or get in touch with
 my associate at harold.smith@gmail.com';
 
-let parsed =  commonregex::CommonRegex(text);
+let parsed =  commonregex::common_regex(text);
 println!("{:?}", parsed);
 /* prints CommonRegex { dates: ["Jan 9th 2012"], times: ["5:00PM", "4:00 "], phones: ["(519)-236-2723"], phones_with_exts: ["(519)-236-2723x341"], links: ["www.linkedin.com", "harold.smith@gmail.com"], emails: ["harold.smith@gmail.com"], ipv4s: [], ipv6s: [], prices: [], hex_colors: ["201", "dea", "eac", "519", "236", "272", "341"], credit_cards: [], visas: [], mastercards: [], btc_addresses: [], street_addresses: [], zip_codes: [], po_boxs: [], ssns: [], md5s: [], sha1s: [], sha2s: [], guids: [], isbn13s: [], isbn10s: [], mac_addresses: [], ibans: [], gitrepos: [] } */
 println!("{:?}", parsed.dates);
