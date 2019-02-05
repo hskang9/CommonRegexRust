@@ -1,0 +1,1 @@
+/Users/hyungsukkang/rust/Rust30-code/day08-unit-testing/target/debug/day08-unit-testing.dSYM: /Users/hyungsukkang/rust/Rust30-code/day08-unit-testing/src/commonregex.rs /Users/hyungsukkang/rust/Rust30-code/day08-unit-testing/src/main.rs

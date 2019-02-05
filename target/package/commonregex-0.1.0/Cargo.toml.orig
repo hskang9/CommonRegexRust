@@ -1,0 +1,27 @@
+[package]
+name = "commonregex"
+version = "0.1.0"
+authors = ["hskang9 <hskang9@gmail.com>"]
+edition = "2018"
+
+description = "Rust port for CommonRegex. Find all times, dates, links, phone numbers, emails, ip addresses, prices, hex colors, and credit card numbers in a string. We did the hard work so you don't have to."
+
+homepage = "https://github.com/hskang9/CommonRegexRust"
+
+readme = "README.md"
+
+keywords = ["regex", "commonregex", "regular-expression", "regexp"]
+
+categories = ["parsing"]
+
+license = "MIT"
+
+[badges]
+travis-ci = { repository = "https://github.com/hskang9/CommonRegexRust.git", branch = "master" }
+
+
+
+[dependencies]
+regex = "1"
+
+
