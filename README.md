@@ -69,11 +69,11 @@ Possible properties and its equivalent methods:
 
 Examples
 ========
-
-let text = 'John, please get that article on www.linkedin.com to me by 5:00PM\n'
-+ 'on Jan 9th 2012. 4:00 would be ideal, actually. If you have any questions,\n'
-+ 'you can reach my associate at (012)-345-6789 or associative@mail.com.\n'
-+ 'I\'ll be on UK during the whole week on a J.R.R. Tolkien convention.';
+```
+let text = 'John, please get that article on www.linkedin.com to me by 5:00PM 
+on Jan 9th 2012. 4:00 would be ideal, actually. If you have any 
+questions, You can reach me at (519)-236-2723x341 or get in touch with
+my associate at harold.smith@gmail.com';
 
 let parsed =  commonregex::CommonRegex(text);
 println!("{:?}", parsed);
@@ -88,17 +88,17 @@ println!("{:?}",parsed.links);
 //prints ["www.linkedin.com"]
 println!("{:?}",parsed.emails);
 //prints ["associative@mail.com"]
-
+```   
 
 Alternatively, you can generate a single CommonRegex instance and use it to parse multiple segments of text.
-
+```
 println!("{:?}",commonregex::times("When are you free? Do you want to meet up for coffee at 4:00?"));
 //prints ["4:00"]
 println!("{:?}",commonregex::prices("They said the price was $5,000.90, actually it is $3,900.5. It\'s $1100.4 less, can you imagine this?"));
 //prints ["$5,000.90", "$3,900.5", "$110"]
 println!("{:?}",commonregex::ipv6s("The IPv6 address for localhost is 0:0:0:0:0:0:0:1, or alternatively, ::1."));
 //prints ["0:0:0:0:0:0:0:1", "::1"]
-
+```
 
 CommonRegex Ports
 =================
