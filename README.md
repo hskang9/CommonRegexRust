@@ -28,7 +28,7 @@ version = <version>
 authors = [<you>]
 
 [dependencies]
-commonregex = "0.1.0"
+commonregex = "0.1.2"
 ```
 then run `cargo build` on terminal.
 
