@@ -336,4 +336,129 @@ mod tests {
         use super::ipv6s;
         assert_eq!(format!("{:?}", ipv6s("The IPv6 address for localhost is 0:0:0:0:0:0:0:1, or alternatively, ::1.")), r#"["0:0:0:0:0:0:0:1", "::1"]"#);
     }
+
+    #[test]
+    fn test_dates() {
+        use super::dates;
+        assert_eq!(
+            format!("{:?}", dates("Meet me on Jan 15th 2024 or 12/25/24.")),
+            r#"["Jan 15th 2024", "12/25/24"]"#
+        );
+    }
+
+    #[test]
+    fn test_phones() {
+        use super::phones;
+        assert_eq!(
+            format!("{:?}", phones("Call me at 555-123-4567 or (800) 555-1234.")),
+            r#"["555-123-4567", "(800) 555-1234"]"#
+        );
+    }
+
+    #[test]
+    fn test_emails() {
+        use super::emails;
+        assert_eq!(
+            format!("{:?}", emails("Contact admin@example.com or user.name+tag@domain.co.uk")),
+            r#"["admin@example.com", "user.name+tag@domain.co.uk"]"#
+        );
+    }
+
+    #[test]
+    fn test_ips() {
+        use super::ips;
+        assert_eq!(
+            format!("{:?}", ips("Server at 192.168.1.1 and 10.0.0.1")),
+            r#"["192.168.1.1", "10.0.0.1"]"#
+        );
+    }
+
+    #[test]
+    fn test_links() {
+        use super::links;
+        let result = links("Check https://github.com and www.example.com for more.");
+        assert!(result.iter().any(|s| s.contains("github.com")));
+        assert!(result.iter().any(|s| s.contains("example.com")));
+    }
+
+    #[test]
+    fn test_hex_colors() {
+        use super::hex_colors;
+        assert_eq!(
+            format!("{:?}", hex_colors("Colors: #FF5733, #FFF and abc123")),
+            r##"["#FF5733", "#FFF", "abc123"]"##
+        );
+    }
+
+    #[test]
+    fn test_ssns() {
+        use super::ssns;
+        assert_eq!(
+            format!("{:?}", ssns("SSN: 123-45-6789")),
+            r#"["123-45-6789"]"#
+        );
+    }
+
+    #[test]
+    fn test_zip_codes() {
+        use super::zip_codes;
+        assert_eq!(
+            format!("{:?}", zip_codes("ZIP: 90210 or 12345-6789")),
+            r#"["90210", "12345-6789"]"#
+        );
+    }
+
+    #[test]
+    fn test_md5s() {
+        use super::md5s;
+        assert_eq!(
+            format!("{:?}", md5s("Hash: d41d8cd98f00b204e9800998ecf8427e")),
+            r#"["d41d8cd98f00b204e9800998ecf8427e"]"#
+        );
+    }
+
+    #[test]
+    fn test_guids() {
+        use super::guids;
+        assert_eq!(
+            format!("{:?}", guids("ID: 550e8400-e29b-41d4-a716-446655440000")),
+            r#"["550e8400-e29b-41d4-a716-446655440000"]"#
+        );
+    }
+
+    #[test]
+    fn test_mac_addresses() {
+        use super::mac_addresses;
+        assert_eq!(
+            format!("{:?}", mac_addresses("MAC: 00:1B:44:11:3A:B7")),
+            r#"["00:1B:44:11:3A:B7"]"#
+        );
+    }
+
+    #[test]
+    fn test_credit_cards() {
+        use super::credit_cards;
+        assert_eq!(
+            format!("{:?}", credit_cards("Card: 4111 1111 1111 1111")),
+            r#"["4111 1111 1111 1111"]"#
+        );
+    }
+
+    #[test]
+    fn test_po_boxs() {
+        use super::po_boxs;
+        assert_eq!(
+            format!("{:?}", po_boxs("Send to P.O. Box 123 or PO Box 456")),
+            r#"["P.O. Box 123", "PO Box 456"]"#
+        );
+    }
+
+    #[test]
+    fn test_empty_input() {
+        use super::common_regex;
+        let result = common_regex("");
+        assert!(result.dates.is_empty());
+        assert!(result.emails.is_empty());
+        assert!(result.phones.is_empty());
+    }
 }
